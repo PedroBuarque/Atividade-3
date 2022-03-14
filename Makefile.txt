@@ -1,0 +1,13 @@
+NOME_PROJETO=calculo_thread
+GCC=gcc
+BIN=calculadorThread
+RM=rm -rf 
+C_file=$(wildcard *.c)
+CC_FLAGS=-pthread
+
+all:
+	$(GCC) $(C_file) $< $(CC_FLAGS) -o $(BIN)
+run:
+	./$(BIN)
+clean:
+	$(RM) *.o $(BIN)		 
